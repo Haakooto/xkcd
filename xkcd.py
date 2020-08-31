@@ -1,39 +1,50 @@
-import webbrowser, sys, random as rand, json, requests
+import numpy as 
+import json
+import requests
+from PIL import Image as XKCD
+from io import BytesIO
+from bs4 import BeautifulSoup as BS
 
 baseurl = "https://xkcd.com/"  # sets baseurl for combination with number
 new = requests.get("https://xkcd.com/info.0.json").json()[
     "num"
 ]  # finds the number of the newest xkcd
 
+num = np.random.randint(1, new)
+url = baseurl + str(num)
 
-def open_xkcd(num):
-    url = baseurl + str(num)
-    webbrowser.open(url)
+response = requests.get(url)
+txt = response.text
 
+soup = BS(response.content, "html.parser")
+xkcd = str(soup.find("div", {"id": "comic"}))
+start = xkcd.find("src")
+end = xkcd.find(".png")
+xkcd = xkcd[start + 5: end + 4]
 
-def check_valid(num):
-    try:
-        num = int(num)
-    except:
-        open_xkcd(new)
-        print("yup")
-    if num <= new and 0 < num:
-        open_xkcd(num)
-    else:
-        open_xkcd(new)
+print(xkcd)
 
+response = requests.get("http:" + xkcd)
+img = XKCD.open(BytesIO(response.content))
+img.save("xkcd.png")
 
-def random():
-    num = rand.randint(1, new)
-    open_xkcd(num)
-
-
-def newest():
-    open_xkcd(new)
-
-
-if __name__ == "__main__":
-    if len(sys.argv) != 1:
-        check_valid(sys.argv[-1])
-    else:
-        random()
+XKCDXKCD = XKCD.open("xkcd.png")
+XKCDXKCDXKCD, XKCDXKCDXKCDXKCD = XKCDXKCD.size
+XKCDXKCDXKCDXKCDXKCD = XKCDXKCDXKCDXKCD / XKCDXKCDXKCD
+XKCDXKCDXKCDXKCDXKCDXKCD = 120
+XKCDXKCDXKCDXKCDXKCDXKCDXKCD = XKCDXKCDXKCDXKCDXKCD * XKCDXKCDXKCDXKCDXKCDXKCD * 0.55
+XKCDXKCD = XKCDXKCD.resize((XKCDXKCDXKCDXKCDXKCDXKCD, int(XKCDXKCDXKCDXKCDXKCDXKCDXKCD)))
+XKCDXKCD = XKCDXKCD.convert("L")
+XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD = XKCDXKCD.getdata()
+XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD = ["X", "K", "C", "Ð", "D", "x", "k", "c", "d", "×", " "]
+XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD = [
+    XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD[XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD // 25] for XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD in XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD
+]
+XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD = "".join(XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD)
+XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD = len(XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD)
+XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD = [
+    XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD[XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD : XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD + XKCDXKCDXKCDXKCDXKCDXKCD]
+    for XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD in range(0, XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD, XKCDXKCDXKCDXKCDXKCDXKCD)
+]
+XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD = "\n".join(XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD)
+print(XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD)
