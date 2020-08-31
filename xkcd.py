@@ -1,34 +1,29 @@
-import numpy as 
-import json
-import requests
-from PIL import Image as XKCD
-from io import BytesIO
-from bs4 import BeautifulSoup as BS
+import numpy as xkcd
+import json as Xkcd
+import requests as XKcd
+from PIL import Image as xkcdxkcd
+from io import BytesIO as XKCD
+from bs4 import BeautifulSoup as xKcd
 
-baseurl = "https://xkcd.com/"  # sets baseurl for combination with number
-new = requests.get("https://xkcd.com/info.0.json").json()[
-    "num"
-]  # finds the number of the newest xkcd
+xkCd = "https://xkcd.com/"
+xkcD = XKcd.get("https://xkcd.com/info.0.json").json()["num"]
 
-num = np.random.randint(1, new)
-url = baseurl + str(num)
+xkCD = xkcd.random.randint(1, xkcD)
+XkCd = xkCd + str(xkCD)
 
-response = requests.get(url)
-txt = response.text
+XkcD = XKcd.get(XkCd)
 
-soup = BS(response.content, "html.parser")
-xkcd = str(soup.find("div", {"id": "comic"}))
-start = xkcd.find("src")
-end = xkcd.find(".png")
-xkcd = xkcd[start + 5: end + 4]
+XKCd = xKcd(XkcD.content, "html.parser")
+xkcd = str(XKCd.find("div", {"id": "comic"}))
+XKcD = xkcd.find("src")
+XkCD = xkcd.find(".png")
+xkcd = xkcd[XKcD + 5: XkCD + 4]
 
-print(xkcd)
+XkcD = XKcd.get("http:" + xkcd)
+xKCD = xkcdxkcd.open(XKCD(XkcD.content))
+xKCD.save("xkcd.png")
 
-response = requests.get("http:" + xkcd)
-img = XKCD.open(BytesIO(response.content))
-img.save("xkcd.png")
-
-XKCDXKCD = XKCD.open("xkcd.png")
+XKCDXKCD = xkcdxkcd.open("xkcd.png")
 XKCDXKCDXKCD, XKCDXKCDXKCDXKCD = XKCDXKCD.size
 XKCDXKCDXKCDXKCDXKCD = XKCDXKCDXKCDXKCD / XKCDXKCDXKCD
 XKCDXKCDXKCDXKCDXKCDXKCD = 120
