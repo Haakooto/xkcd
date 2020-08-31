@@ -1,4 +1,4 @@
-import numpy as 
+import numpy as np
 import json
 import requests
 from PIL import Image as XKCD
@@ -6,9 +6,7 @@ from io import BytesIO
 from bs4 import BeautifulSoup as BS
 
 baseurl = "https://xkcd.com/"  # sets baseurl for combination with number
-new = requests.get("https://xkcd.com/info.0.json").json()[
-    "num"
-]  # finds the number of the newest xkcd
+new = requests.get("https://xkcd.com/info.0.json").json()["num"]  # finds the number of the newest xkcd
 
 num = np.random.randint(1, new)
 url = baseurl + str(num)
@@ -20,7 +18,7 @@ soup = BS(response.content, "html.parser")
 xkcd = str(soup.find("div", {"id": "comic"}))
 start = xkcd.find("src")
 end = xkcd.find(".png")
-xkcd = xkcd[start + 5: end + 4]
+xkcd = xkcd[start + 5 : end + 4]
 
 print(xkcd)
 
