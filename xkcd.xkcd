@@ -1,39 +1,42 @@
-import xkcd as xkcdxkcdxkcdxkcdxkcd
+import numpy as xkcd
+import json as Xkcd
+import requests as XKcd
+from PIL import Image as xkcdxkcd
+from io import BytesIO as XKCD
+from bs4 import BeautifulSoup as xKcd
 
-xkcd = "https://xkcd.com/"
-xkcdxkcd = xkcdxkcdxkcdxkcdxkcd.xkcdxkcdxkcdxkcd("https://xkcd.com/info.0.json").json()[
-    "num"
+xkCd = "https://xkcd.com/"
+xkcD = XKcd.get("https://xkcd.com/info.0.json").json()["num"]
+xkCD = xkcd.random.randint(1, xkcD)
+XkCd = xkCd + str(xkCD)
+
+XkcD = XKcd.get(XkCd)
+
+XKCd = xKcd(XkcD.content, "html.parser")
+xkcd = str(XKCd.find("div", {"id": "comic"}))
+XKcD = xkcd.find("src")
+XkCD = xkcd.find(".png")
+xkcd = xkcd[XKcD + 5: XkCD + 4]
+
+XkcD = XKcd.get("http:" + xkcd)
+XKCDXKCD = xkcdxkcd.open(XKCD(XkcD.content))
+
+XKCDXKCDXKCD, XKCDXKCDXKCDXKCD = XKCDXKCD.size
+XKCDXKCDXKCDXKCDXKCD = XKCDXKCDXKCDXKCD / XKCDXKCDXKCD
+XKCDXKCDXKCDXKCDXKCDXKCD = 120
+XKCDXKCDXKCDXKCDXKCDXKCDXKCD = XKCDXKCDXKCDXKCDXKCD * XKCDXKCDXKCDXKCDXKCDXKCD * 0.55
+XKCDXKCD = XKCDXKCD.resize((XKCDXKCDXKCDXKCDXKCDXKCD, int(XKCDXKCDXKCDXKCDXKCDXKCDXKCD)))
+XKCDXKCD = XKCDXKCD.convert("L")
+XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD = XKCDXKCD.getdata()
+XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD = ["X", "K", "C", "Ð", "D", "x", "k", "c", "d", "×", " "]
+XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD = [
+    XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD[XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD // 25] for XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD in XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD
 ]
-xkcdxkcd = xkcdxkcdxkcdxkcdxkcd.xkcd(1, xkcdxkcd)
-xkcd += str(xkcdxkcd)
-
-xkcd = xkcdxkcdxkcdxkcdxkcd.xkcdxkcdxkcdxkcd(xkcd)
-
-xkcdxkcd = xkcdxkcdxkcdxkcdxkcd.xkcdxkcd(xkcd.content, "html.parser")
-xkcdxkcd = str(xkcdxkcd.find("div", {"id": "comic"}))
-xkcdxkcdxkcd = xkcdxkcd.find("src")
-xkcdxkcdxkcdxkcd = xkcdxkcd.find(".png")
-xkcdxkcd = xkcdxkcd[xkcdxkcdxkcd + 5 : xkcdxkcdxkcdxkcd + 4]
-
-xkcd = xkcdxkcdxkcdxkcdxkcd.xkcdxkcdxkcdxkcd("http:" + xkcdxkcd)
-xkcd = xkcdxkcdxkcdxkcdxkcd.xkcdxkcdxkcd(
-    xkcdxkcdxkcdxkcdxkcd.xkcdxkcdxkcdxkcdxkcd(xkcd.content)
-)
-
-xkcdxkcd, xkcdxkcdxkcd = xkcd.size
-xkcdxkcd = xkcdxkcdxkcd / xkcdxkcd
-xkcdxkcdxkcd = 120
-xkcdxkcd = xkcdxkcd * xkcdxkcdxkcd * 0.55
-xkcd = xkcd.resize((xkcdxkcdxkcd, int(xkcdxkcd)))
-xkcd = xkcd.convert("L")
-xkcdxkcd = xkcd.getdata()
-xkcdxkcdxkcdxkcd = ["X", "K", "C", "Ð", "D", "x", "k", "c", "d", "×", " "]
-xkcdxkcdxkcdxkcd = [xkcdxkcdxkcdxkcd[xkcd // 25] for xkcd in xkcdxkcd]
-xkcdxkcdxkcdxkcd = "".join(xkcdxkcdxkcdxkcd)
-xkcd = len(xkcdxkcdxkcdxkcd)
-xkcdxkcd = [
-    xkcdxkcdxkcdxkcd[xkcd : xkcd + xkcdxkcdxkcd]
-    for xkcd in range(0, xkcd, xkcdxkcdxkcd)
+XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD = "".join(XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD)
+XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD = len(XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD)
+XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD = [
+    XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD[XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD : XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD + XKCDXKCDXKCDXKCDXKCDXKCD]
+    for XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD in range(0, XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD, XKCDXKCDXKCDXKCDXKCDXKCD)
 ]
-xkcdxkcd = "\n".join(xkcdxkcd)
-print(xkcdxkcd)
+XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD = "\n".join(XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD)
+print(XKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCDXKCD)
